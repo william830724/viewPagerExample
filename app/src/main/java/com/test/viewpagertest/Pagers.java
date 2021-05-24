@@ -28,8 +28,8 @@ public class Pagers extends LinearLayout {//繼承別的Layout亦可
             view = inflater.inflate(R.layout.my_page_2, null);//連接頁面
         }else if(pageNumber ==2 ){
             view = inflater.inflate(R.layout.my_page_3, null);//連接頁面
-            //recyclerView
-//            setCardViewDataAndRecyclerView(context);
+            //recyclerView 畫面
+            setCardViewDataAndRecyclerView(context);
 
             RecyclerView recyclerView = view.findViewById(R.id.recyclerView);
             recyclerView.setLayoutManager(new LinearLayoutManager(context,RecyclerView.VERTICAL,false));
@@ -57,10 +57,8 @@ public class Pagers extends LinearLayout {//繼承別的Layout亦可
         String TAG = "RecyclerView";
 
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
-//        recyclerView.setLayoutManager(new LinearLayoutManager(context,RecyclerView.VERTICAL,false));
-
+        recyclerView.setLayoutManager(new LinearLayoutManager(context,RecyclerView.VERTICAL,false));
         recyclerAdapter recyclerAdapter = new recyclerAdapter(context);
-
         recyclerView.setAdapter(recyclerAdapter);
     }
 
@@ -79,10 +77,6 @@ public class Pagers extends LinearLayout {//繼承別的Layout亦可
 
             public ViewHolder(@NonNull View itemView) {
                 super(itemView);
-//                address = itemView.findViewById(R.id.address_textView);
-//                tempMax = itemView.findViewById(R.id.tempMax_textView);
-//                tempMin = itemView.findViewById(R.id.tempMin_textView);
-
                 button1 = itemView.findViewById(R.id.recycler_button1);
                 button2 = itemView.findViewById(R.id.recycler_button2);
 
@@ -99,9 +93,7 @@ public class Pagers extends LinearLayout {//繼承別的Layout亦可
         //設定 recyclerView 內容
         @Override
         public void onBindViewHolder(@NonNull recyclerAdapter.ViewHolder holder, int position) {
-//            holder.address.setText(listMinT.get(position).getLocationName());
-//            holder.tempMax.setText(listMaxT.get(position).getParameterName()+"C");
-//            holder.tempMin.setText(listMinT.get(position).getParameterName()+"C");
+
 
         }
         @Override
