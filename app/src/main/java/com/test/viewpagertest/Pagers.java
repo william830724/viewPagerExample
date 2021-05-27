@@ -29,7 +29,7 @@ public class Pagers extends LinearLayout {//繼承別的Layout亦可
         }else if(pageNumber ==2 ){
             view = inflater.inflate(R.layout.my_page_3, null);//連接頁面
             //recyclerView 畫面
-            setCardViewDataAndRecyclerView(context);
+//            setCardViewDataAndRecyclerView(context);
 
             RecyclerView recyclerView = view.findViewById(R.id.recyclerView);
             recyclerView.setLayoutManager(new LinearLayoutManager(context,RecyclerView.VERTICAL,false));
